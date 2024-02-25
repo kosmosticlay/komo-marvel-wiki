@@ -34,17 +34,6 @@ export default function Details() {
     }
   }, [selectedChar]);
 
-  useEffect(() => {
-    const getComics = async () => {
-      const response = await fetch(
-        `http://gateway.marvel.com/v1/public/comics/58636`
-      );
-      const json = await response.json();
-      console.log(json);
-    };
-    getComics();
-  }, []);
-
   return (
     <>
       <div className={styles.detailsWrapper} ref={bgImageRef}>
